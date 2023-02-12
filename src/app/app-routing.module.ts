@@ -6,6 +6,11 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { EducationComponent } from './components/education/education.component';
 const routes: Routes = [
+    { 
+        path: '', 
+        redirectTo: '/home', 
+        pathMatch: 'full' 
+    },
     {
       component:HomeComponent,
       path:"home"
@@ -22,6 +27,10 @@ const routes: Routes = [
     },{
       component:EducationComponent,
       path:"educationexperience"
+    },
+    { 
+      path: '**', redirectTo: '/heroes', 
+      pathMatch: 'full' 
     }
 ];
 
